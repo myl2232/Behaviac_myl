@@ -1,0 +1,5 @@
+F:\Beta\AlphaWork\Assets\GameFrameworkExtensions\behaviac.dll
+F:\Beta\AlphaWork\Assets\GameFrameworkExtensions\behaviac.pdb
+F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.csprojResolveAssemblyReference.cache
+F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.dll
+F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.pdb
