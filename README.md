@@ -3,6 +3,9 @@
 [![Updates](https://img.shields.io/badge/Platform-%20iOS%20%7C%20OS%20X%20%7C%20Android%20%7C%20Windows%20%7C%20Linux%20-brightgreen.svg)](https://github.com/Tencent/behaviac/blob/master/history.txt)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Tencent/behaviac/pulls)
 
+<---------------------------------------------------------->
+针对Unity使用做了一些debug.log去除等操作，避免有太多cpu消耗
+<---------------------------------------------------------->
 ## [访问http://www.behaviac.com/获取文档，教程，API，FAQ，源码，下载等一切相关资料](http://www.behaviac.com/)
 
  - behaviac是游戏AI的开发框架组件，也是游戏原型的快速设计工具
