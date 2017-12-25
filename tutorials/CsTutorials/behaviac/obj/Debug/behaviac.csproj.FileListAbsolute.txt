@@ -3,3 +3,6 @@ F:\Beta\AlphaWork\Assets\GameFrameworkExtensions\behaviac.pdb
 F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.csprojResolveAssemblyReference.cache
 F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.dll
 F:\behaviac\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.pdb
+F:\Behaviac_myl\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.csprojResolveAssemblyReference.cache
+F:\Behaviac_myl\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.dll
+F:\Behaviac_myl\tutorials\CsTutorials\behaviac\obj\Debug\behaviac.pdb
