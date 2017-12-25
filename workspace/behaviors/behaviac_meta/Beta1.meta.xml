@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<meta>
+  <types>
+    <enumtype Type="LogicStatus" Namespace="" IsCustomized="true" DisplayName="LogicStatus" Desc="">
+      <enum NativeValue="ELogic_IDLE" Value="ELogic_IDLE" DisplayName="ELogic_IDLE" Desc="" MemberValue="0" />
+      <enum NativeValue="ELogic_PATROL" Value="ELogic_PATROL" DisplayName="ELogic_PATROL" Desc="" MemberValue="1" />
+      <enum NativeValue="ELogic_ATTACK" Value="ELogic_ATTACK" DisplayName="ELogic_ATTACK" Desc="" MemberValue="2" />
+      <enum NativeValue="ELogic_AIR" Value="ELogic_AIR" DisplayName="ELogic_AIR" Desc="" MemberValue="3" />
+      <enum NativeValue="ELogic_Hurt" Value="ELogic_Hurt" DisplayName="ELogic_Hurt" Desc="" MemberValue="4" />
+      <enum NativeValue="ELogic_Dead" Value="ELogic_Dead" DisplayName="ELogic_Dead" Desc="" MemberValue="5" />
+      <enum NativeValue="ELogic_Jump" Value="ELogic_Jump" DisplayName="ELogic_Jump" Desc="" MemberValue="6" />
+    </enumtype>
+  </types>
+  <agents>
+    <agent classfullname="behaviac::Agent" DisplayName="behaviac::Agent" Desc="behaviac::Agent" IsRefType="true" IsImplemented="true">
+      <Method Name="VectorLength" DisplayName="VectorLength" Desc="VectorLength" Class="behaviac::Agent" ReturnType="int" ReturnTypeFullName="System.Int32" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="VectorAdd" DisplayName="VectorAdd" Desc="VectorAdd" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorRemove" DisplayName="VectorRemove" Desc="VectorRemove" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorContains" DisplayName="VectorContains" Desc="VectorContains" Class="behaviac::Agent" ReturnType="bool" ReturnTypeFullName="System.Boolean" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+        <Param Name="param1" Type="const System::Object&amp;" TypeFullName="System.Object" DisplayName="param1" Desc="param1" />
+      </Method>
+      <Method Name="VectorClear" DisplayName="VectorClear" Desc="VectorClear" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="IList&amp;" TypeFullName="System.Collections.IList" DisplayName="param0" Desc="param0" />
+      </Method>
+      <Method Name="LogMessage" DisplayName="LogMessage" Desc="LogMessage" Class="behaviac::Agent" ReturnType="void" ReturnTypeFullName="System.Void" Static="true" Public="true" istask="false">
+        <Param Name="param0" Type="const char*" TypeFullName="System.String" DisplayName="param0" Desc="param0" />
+      </Method>
+    </agent>
+    <agent classfullname="BaseAgent" base="behaviac::Agent" DisplayName="BaseAgent" Desc="BaseAgent" IsRefType="true" IsCustomized="true">
+      <Member Name="m_LogicStatus" DisplayName="m_LogicStatus" Desc="m_LogicStatus" Class="BaseAgent" Type="LogicStatus" TypeFullName="XMLPluginBehaviac.LogicStatus" defaultvalue="ELogic_IDLE" Static="false" Public="false" Readonly="false" />
+    </agent>
+    <agent classfullname="EnemyAgent" base="BaseAgent" DisplayName="EnemyAgent" Desc="EnemyAgent" IsRefType="true" IsCustomized="true">
+      <Method Name="Attack" DisplayName="Attack" Desc="Attack" Class="EnemyAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false">
+        <Param Name="attackParam" Type="float" TypeFullName="System.Single" DisplayName="attackParam" Desc="attackParam" />
+      </Method>
+      <Method Name="MakeIdle" DisplayName="MakeIdle" Desc="MakeIdle" Class="EnemyAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="Patrol" DisplayName="Patrol" Desc="Patrol" Class="EnemyAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+      <Method Name="FlushSensor" DisplayName="FlushSensor" Desc="FlushSensor" Class="EnemyAgent" ReturnType="void" ReturnTypeFullName="System.Void" Static="false" Public="true" istask="false" />
+    </agent>
+  </agents>
+  <instances />
+</meta>
