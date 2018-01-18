@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Behavior Version="5" NoError="true">
+  <Node Class="Behaviac.Design.Nodes.Behavior" AgentType="EnemyAgent" Domains="" Enable="true" HasOwnPrefabData="false" Id="-1" PrefabName="" PrefabNodeId="-1">
+    <Comment Background="NoColor" Text="" />
+    <DescriptorRefs value="0:" />
+    <Attachment Class="PluginBehaviac.Events.StartCondition" Enable="true" Id="0" PrefabAttachmentId="-1" TargetFSMNodeId="1" />
+    <FSMNodes ScreenLocationX="0" ScreenLocationY="0">
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="1" IsEndState="true" Method="Self.EnemyAgent::ActionPatrol(0.2)" Name="PatrolState" PrefabName="" PrefabNodeId="-1" ScreenLocationX="179.9732" ScreenLocationY="-51.15025">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="6" Operator="Equal" Opl="LogicStatus Self.BaseAgent::logicStatus" Opr1="&quot;&quot;" Opr2="const LogicStatus ELogic_TRACK" PrefabAttachmentId="-1" TargetFSMNodeId="2" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="8" Operator="Equal" Opl="LogicStatus Self.BaseAgent::logicStatus" Opr1="&quot;&quot;" Opr2="const LogicStatus ELogic_ATTACK" PrefabAttachmentId="-1" TargetFSMNodeId="3" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="2" IsEndState="false" Method="Self.EnemyAgent::ActionPatrol(0.6)" Name="TrackState" PrefabName="" PrefabNodeId="-1" ScreenLocationX="409.7376" ScreenLocationY="-1.841671">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="5" Operator="Equal" Opl="LogicStatus Self.BaseAgent::logicStatus" Opr1="&quot;&quot;" Opr2="const LogicStatus ELogic_PATROL" PrefabAttachmentId="-1" TargetFSMNodeId="1" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="4" Operator="Equal" Opl="LogicStatus Self.BaseAgent::logicStatus" Opr1="&quot;&quot;" Opr2="const LogicStatus ELogic_ATTACK" PrefabAttachmentId="-1" TargetFSMNodeId="3" />
+      </Node>
+      <Node Class="PluginBehaviac.Nodes.State" Enable="true" HasOwnPrefabData="false" Id="3" IsEndState="false" Method="Self.EnemyAgent::ActionAttack()" Name="AttackState" PrefabName="" PrefabNodeId="-1" ScreenLocationX="199.7733" ScreenLocationY="80.6907">
+        <Comment Background="NoColor" Text="" />
+        <Attachment Class="PluginBehaviac.Events.TransitionCondition" Effectors="0:" Enable="true" Id="7" Operator="Equal" Opl="LogicStatus Self.BaseAgent::logicStatus" Opr1="&quot;&quot;" Opr2="const LogicStatus ELogic_PATROL" PrefabAttachmentId="-1" TargetFSMNodeId="1" />
+      </Node>
+    </FSMNodes>
+  </Node>
+</Behavior>
